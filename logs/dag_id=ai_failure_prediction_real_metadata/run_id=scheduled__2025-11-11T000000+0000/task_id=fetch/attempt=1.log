@@ -1,0 +1,16 @@
+{"timestamp":"2025-11-11T02:45:15.402672Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-11-11T02:45:15.453106Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/ai_failure_prediction_real_metadata.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-11-11T02:45:45.817035Z","level":"error","event":"Process timed out, PID: 97","logger":"airflow.models.dagbag","filename":"dagbag.py","lineno":134}
+{"timestamp":"2025-11-11T02:45:45.818600Z","level":"error","event":"Exception ignored in: <function WeakSet.__init__.<locals>._remove at 0x7ff2c3c058a0>","logger":"task.stderr"}
+{"timestamp":"2025-11-11T02:45:45.819321Z","level":"error","event":"Traceback (most recent call last):","logger":"task.stderr"}
+{"timestamp":"2025-11-11T02:45:45.819852Z","level":"error","event":"  File \"/usr/python/lib/python3.12/_weakrefset.py\", line 39, in _remove","logger":"task.stderr"}
+{"timestamp":"2025-11-11T02:45:45.820689Z","level":"error","event":"    def _remove(item, selfref=ref(self)):","logger":"task.stderr"}
+{"timestamp":"2025-11-11T02:45:45.821394Z","level":"error","event":"","logger":"task.stderr"}
+{"timestamp":"2025-11-11T02:45:45.821877Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py\", line 135, in handle_timeout","logger":"task.stderr"}
+{"timestamp":"2025-11-11T02:45:45.822867Z","level":"error","event":"    raise AirflowTaskTimeout(error_message)","logger":"task.stderr"}
+{"timestamp":"2025-11-11T02:45:45.824194Z","level":"error","event":"airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/ai_failure_prediction_real_metadata.py after 30.0s.","logger":"task.stderr"}
+{"timestamp":"2025-11-11T02:45:45.824854Z","level":"error","event":"Please take a look at these docs to improve your DAG import time:","logger":"task.stderr"}
+{"timestamp":"2025-11-11T02:45:45.825426Z","level":"error","event":"* https://airflow.apache.org/docs/apache-airflow/3.1.0/best-practices.html#top-level-python-code","logger":"task.stderr"}
+{"timestamp":"2025-11-11T02:45:45.826087Z","level":"error","event":"* https://airflow.apache.org/docs/apache-airflow/3.1.0/best-practices.html#reducing-dag-complexity, PID: 97","logger":"task.stderr"}
+{"timestamp":"2025-11-11T02:46:01.647934Z","level":"info","event":"Retrieved 452 task records from Airflow DB.","logger":"task.stdout"}
+{"timestamp":"2025-11-11T02:46:02.221006Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":218}

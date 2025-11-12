@@ -1,0 +1,1 @@
+{"_invocation_id": "1855ac58-1895-4856-bd15-02439da314d5", "linked": {"0": {"name": "model.my_dbt_project.example_model", "type": "model"}, "1": {"name": "seed.my_dbt_project.example_seed", "type": "seed", "succ": [0]}}}

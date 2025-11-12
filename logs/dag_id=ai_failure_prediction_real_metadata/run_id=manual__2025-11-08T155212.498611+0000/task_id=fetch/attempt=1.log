@@ -1,0 +1,4 @@
+{"timestamp":"2025-11-08T15:52:13.902581Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-11-08T15:52:13.909566Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/ai_failure_prediction_real_metadata.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-11-08T15:52:17.844655Z","level":"info","event":"Retrieved 427 task records from Airflow DB.","logger":"task.stdout"}
+{"timestamp":"2025-11-08T15:52:17.885497Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":218}

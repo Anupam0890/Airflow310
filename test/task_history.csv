@@ -1,0 +1,4 @@
+task_id,duration,retries,day_of_week,status
+extract_data,120,1,1,success
+transform_data,350,2,3,failed
+load_data,90,0,4,success

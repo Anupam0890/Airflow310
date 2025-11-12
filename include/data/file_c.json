@@ -1,0 +1,5 @@
+{
+    "dag_id": "file_c",
+    "schedule": "@monthly",
+    "input": "file_c.csv"
+}

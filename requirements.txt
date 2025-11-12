@@ -1,0 +1,3 @@
+pymongo==4.15.1
+dbt-postgres==1.9.1
+psycopg2-binary==2.9.11

@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "airflow"."public"."example_seed";
+    -- dbt seed --
+    
+          insert into "airflow"."public"."example_seed" ("id", "name") values
+          (%s,%s),(%s,%s),(%s,%s)
+      
+
+;
+  
