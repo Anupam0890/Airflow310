@@ -158,6 +158,20 @@ services:
     depends_on:
       <<: *airflow-common-depends-on
   
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ./ollama_models:/root/.ollama
+    networks:
+      - airflow_ollama_net
+    restart: unless-stopped
+    # preload model (optional)
+    entrypoint: ["bash", "-c", "ollama serve & sleep 5 && ollama pull codellama && tail -f /dev/null"]    
+
 volumes:
   airflow-metabase-volume:
+  ollama_models:
 #    driver: local
