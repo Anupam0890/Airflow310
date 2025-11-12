@@ -175,3 +175,5 @@ volumes:
   airflow-metabase-volume:
   ollama_models:
 #    driver: local
+networks:
+  airflow_ollama_net:
