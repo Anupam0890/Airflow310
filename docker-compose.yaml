@@ -165,8 +165,6 @@ services:
       - "11434:11434"
     volumes:
       - ./ollama_models:/root/.ollama
-    networks:
-      - airflow_ollama_net
     restart: unless-stopped
     # preload model (optional)
     entrypoint: ["bash", "-c", "ollama serve & sleep 5 && ollama pull codellama && tail -f /dev/null"]    
@@ -174,6 +172,3 @@ services:
 volumes:
   airflow-metabase-volume:
   ollama_models:
-#    driver: local
-networks:
-  airflow_ollama_net:
