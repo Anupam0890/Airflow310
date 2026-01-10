@@ -1,4 +1,4 @@
-from airflow.sdk import dag, task, Param
+from airflow.sdk import dag, task, get_current_context, Param
 from datetime import datetime
 
 
