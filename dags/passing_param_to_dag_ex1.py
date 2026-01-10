@@ -21,6 +21,11 @@ from datetime import datetime
         "extra_boolean": Param(
             True,
             type="boolean"
+        ),
+        "extra_enum" : Param(
+            "value1",
+            type="string",
+            enum=["value1","value2", "value3"]
         )
     }
 )
