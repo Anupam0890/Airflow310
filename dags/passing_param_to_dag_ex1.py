@@ -17,7 +17,11 @@ from datetime import datetime
            "2026-01-10T15:52:00",
            type="string",
            format="date-time"
-         )
+         ),
+        "extra_boolean": Param(
+            True,
+            type="boolean"
+        )
     }
 )
 def passing_param_to_dag_ex1():
