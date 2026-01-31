@@ -24,7 +24,7 @@ def asset_alias_sender():
     def create_file(path: str):
         # Simulate file creation logic
         with open(path, 'w') as f:
-            f.write('This is my asset file.\n')
+            f.write('This is my asset file content.\n')
         yield Metadata(
             asset=Asset(
                 name="file_a",
