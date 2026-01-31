@@ -13,7 +13,7 @@ def asset_ex_2(self, ds=None):
         }
     )
 
-@asset(name="report", schedule=file_b)
-def report_file_b(context, file_b):
-    events = context["inlet_events"][file_b]
+@asset(name="report", schedule=asset_ex_2)
+def report_file_b(context, asset_ex_2):
+    events = context["inlet_events"][asset_ex_2]
     print(events[-1])
