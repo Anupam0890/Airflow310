@@ -17,3 +17,5 @@ def asset_ex_2(self, ds=None):
 def report_file_b(context, asset_ex_2):
     events = context["inlet_events"][asset_ex_2]
     print(events[-1])
+    with open(events[-1].asset.uri, 'r') as f:
+        print(f.read())
