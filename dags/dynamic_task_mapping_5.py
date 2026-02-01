@@ -13,6 +13,11 @@ def map_and_reduce():
         result = value + constant_val
         return result
     
-    add_values.partial(constant_val=10).expand(value=extra_value())
+    @task
+    def sum_values(values: list[int]) -> int:
+        print(sum(values))
+    
+    numbers = add_values.partial(constant_val=10).expand(value=extra_value())
+    sum_values(numbers)
 
 map_and_reduce()
