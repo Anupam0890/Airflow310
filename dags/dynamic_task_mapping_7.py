@@ -2,7 +2,7 @@ from airflow.sdk import dag, task
 from airflow.exceptions import AirflowSkipException 
 
 
-def filter_file_extension(filepath: tuple(str, str)) -> dict[str, str]:
+def filter_file_extension(filepath: tuple[str, str]) -> dict[str, str]:
     if filepath[0].rsplit('.', 1)[1] == 'zip':
         raise AirflowSkipException(f"Skipping file {filepath[0]} as it has zip extension")
     return {
