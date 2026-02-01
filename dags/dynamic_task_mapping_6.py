@@ -18,7 +18,7 @@ def transforming_and_filtering():
     def add_path(file: str, path: str) -> str:
         return f"{path}/{file}"
 
-    @task
+    @task(trigger_rule='none_failed_min_one_success')
     def print_valid_files(files: list[str]) -> None:
         for file in files:
             print(file)
