@@ -11,9 +11,9 @@ def traditional_mapping():
     def extract_data():
         return [[1], [3], [5]]
 
-    my_task = PythonOperator(
+    my_task = PythonOperator.partial(
         task_id="my_task",
         python_callable=my_function
-    ).expznd(op_args=extract_data())
+    ).expand(op_args=extract_data())
 
 traditional_mapping()
