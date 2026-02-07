@@ -1,5 +1,5 @@
 """Concatenating outputs of multiple tasks"""
-from airflow.sdk import dag, task
+from airflow.sdk import dag, task, get_current_context
 from airflow.exceptions import AirflowSkipException 
 
 def filter_file_extension(filepath: tuple[str, str]) -> dict[str, str]:
@@ -29,8 +29,10 @@ def concatenation_tasks_output():
     def extract_paths() -> list[str]:
         return ['/var', '/var/log', '/home', '/tmp', '/var1', '/var/log1', '/home1', '/tmp1']
 
-    @task
+    @task(map_index_template="{{ filepath }}")
     def add_path(file: str, path: str) -> str:
+        context = get_current_context()
+        context["filepath"] = f"{path}/{file}"
         return f"{path}/{file}"
 
     @task(trigger_rule='none_failed_min_one_success')
